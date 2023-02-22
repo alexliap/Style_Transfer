@@ -5,9 +5,9 @@ channels:
 dependencies:
   - streamlit
   - numpy
-  - pytorch
   - jupyter
   - pip:
+      - torch
       - torchvision
       - torchaudio
-      - pytorch-cuda=11.6 -c pytorch -c nvidia
+      # - pytorch-cuda=11.6 -c pytorch -c nvidia
