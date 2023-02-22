@@ -6,6 +6,6 @@ dependencies:
   - streamlit
   - numpy
   - jupyter
-  - pip:
-      - torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
-      # - pytorch-cuda=11.6 -c pytorch -c nvidia
+  - torch
+  - torchvision
+  - torchaudio
