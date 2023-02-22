@@ -21,8 +21,8 @@ st.write(
     "image, but with the style of the style image. \n"
     "Images should be the same size so both of them have resized to the same "
     "dimensions. \n"
-    "DISCLAIMER: Streamlit cloud doesn't offer GPUs, so this process runs on "
-    "CPU and may take a while!"
+    "\n DISCLAIMER: Streamlit cloud doesn't offer GPUs, so this process runs "
+    "on CPU and may take a while!"
 )
 
 st.sidebar.write('## Upload & Download')
