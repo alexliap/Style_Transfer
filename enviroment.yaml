@@ -1,6 +1,12 @@
 name: style_transfer_app
+channels:
+- defaults
+- conda-forge
 dependencies:
   - streamlit
   - numpy
-  - pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.6 -c pytorch -c nvidia
   - jupyter
