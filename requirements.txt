@@ -1,7 +1,4 @@
 streamlit
 numpy
-pytorch
-torchvision
-torchaudio
-pytorch-cuda=11.6 -c pytorch -c nvidia
+torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 jupyter
