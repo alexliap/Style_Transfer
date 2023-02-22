@@ -20,7 +20,9 @@ st.write(
     "conent "
     "image, but with the style of the style image. \n"
     "Images should be the same size so both of them have resized to the same "
-    "dimensions."
+    "dimensions. \n"
+    "DISCLAIMER: Streamlit cloud doesn't offer GPUs, so this process runs on "
+    "CPU and may take a while!"
 )
 
 st.sidebar.write('## Upload & Download')
@@ -60,4 +62,8 @@ if content_image is not None and style_image is not None:
 if stylization_done:
     st.write('Stylized Image')
     st.image(target)
-    btn = st.sidebar.button('Download Stylized Image', on_click = target.save("stylized_img.jpg"))
+    btn = st.download_button(label = "Download Stylized Image",
+                             data = target, file_name = "stylized_img.jpg",
+                             mime = "image/jpg")
+    # btn = st.sidebar.button('Download Stylized Image',
+    #                         on_click = target.save("stylized_img.jpg"))
