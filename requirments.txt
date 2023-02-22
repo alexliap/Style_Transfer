@@ -1,0 +1,4 @@
+streamlit
+numpy
+pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+jupyter
