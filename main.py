@@ -38,14 +38,14 @@ col1, col2 = st.columns(2)
 if content_image is not None:
     col1.write("Content Image :camera:")
     content = Image.open(content_image)
-    new_content = content.resize((500, 500))
+    new_content = content.resize((400, 400))
     new_content.save('content_test.jpg')
     col1.image(new_content)
 
 if style_image is not None:
     col2.write("Style Image :art:")
     style = Image.open(style_image)
-    new_style = style.resize((500, 500))
+    new_style = style.resize((400, 400))
     new_style.save('style_test.jpg')
     col2.image(new_style)
 
@@ -62,8 +62,9 @@ if content_image is not None and style_image is not None:
 if stylization_done:
     st.write('Stylized Image')
     st.image(target)
-    btn = st.download_button(label = "Download Stylized Image",
-                             data = target, file_name = "stylized_img.jpg",
-                             mime = "image/jpg")
-    # btn = st.sidebar.button('Download Stylized Image',
-    #                         on_click = target.save("stylized_img.jpg"))
+    target.save("stylized_img.jpg")
+    with open("stylized_img.jpg", 'rb') as file:
+        btn = st.sidebar.download_button(label = "Download Stylized Image",
+                                         data = file,
+                                         file_name = "stylized_img.jpg",
+                                         mime = "image/jpg")
