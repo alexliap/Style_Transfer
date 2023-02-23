@@ -2,7 +2,7 @@
 
 An app that deployes a CNN model, VGG-19, to perform style transfer.
 
-- The pictures that are going to be used are resized to the same size (500x500).
+- The pictures that are going to be used are resized to the same size (400x400).
 - The app can run on GPU and CPU (in CPU it might take considerably more time).
 
 <br />
